@@ -1,0 +1,28 @@
+// Almarai
+
+$almarai-weights: (
+    300: "Almarai-Light",
+    400: "Almarai-Regular",
+    700: "Almarai-Bold",
+    800: "Almarai-ExtraBold"
+);
+
+@mixin almarai-font($weight, $file) {
+    @font-face {
+        font-family: "Almarai";
+        src: url("../../fonts/almarai/#{$file}.ttf") format("ttf");
+        font-weight: $weight;
+        font-style: normal;
+    }
+}
+
+// تنفيذ تلقائي لكل الأوزان باستخدام @each
+@each $weight, $file in $almarai-weights {
+    @include almarai-font($weight, $file);
+}
+
+// كود الاستدعاء
+@mixin font-almarai($weight: 400) {
+    font-family: "Almarai", sans-serif !important;
+    font-weight: $weight;
+}

@@ -1,0 +1,76 @@
+@use './varlables' as *;
+
+@mixin button($background-color: $main-color, $color: $color-3, $border-color: $main-color) {
+    background-color: $background-color;
+    color: $color;
+    border: 1px solid $border-color;
+    padding: 2px 30px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $color;
+        color: $background-color;
+    }
+}
+
+@mixin section-title($color: $color-2, $background-color: $main-color) {
+    color: $color;
+    line-height: 50px;
+    position: relative;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 100%;
+        top: 0;
+        right: -30px;
+        background-color: $background-color;
+    }
+}
+
+@mixin card($name: article, $c-bg-color: $main-color, $c-color: $color-3, $color: $color-2) {
+    &-category {
+        padding: 5px 10px;
+        background-color: $c-bg-color;
+        color: $c-color;
+        margin-left: 10px;
+    }
+
+    &-title {
+        font-size: 20px;
+        display: inline;
+        color: $color;
+    }
+
+    &-link {
+        text-decoration: none;
+        color: $color;
+
+        &:hover {
+            .#{$name}-title {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    @media (max-width: 1400px) {
+        &-title {
+            font-size: 18px;
+        }
+
+        &-category {
+            font-size: 14px;
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1200px) {
+        &-title {
+            font-size: 14px;
+        }
+    }
+}
