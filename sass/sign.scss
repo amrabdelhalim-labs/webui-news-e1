@@ -1,0 +1,36 @@
+@use './config/global.scss' as *;
+
+form {
+    .button {
+        @include button($color-3, $main-color, $main-color);
+        font-size: $font-size-4;
+    }
+}
+
+a.custom {
+    color: $main-color;
+}
+
+.social-media-login {
+    .login-button {
+        color: $main-color;
+        margin-left: $space-2;
+        margin-top: $space-1;
+        font-size: $font-size-9;
+        transition: $transition-1;
+
+        &:hover {
+            color: rgba($color: $main-color, $alpha: 0.5);
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        main {
+            .vh-100 {
+                width: 100%;
+            }
+        }
+    }
+}

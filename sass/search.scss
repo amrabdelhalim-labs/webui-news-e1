@@ -1,0 +1,118 @@
+@use './config/global.scss' as *;
+
+.search {
+    &-form {
+        margin-top: $space-11;
+
+        input {
+            width: 75%;
+            padding: $space-1 $space-3;
+            border: $border-1;
+            border-radius: $radius-2;
+        }
+
+        .button {
+            @include button();
+            font-size: $font-size-4;
+            margin-right: $space-9;
+        }
+    }
+
+    &-line {
+        display: flex;
+        justify-content: space-between;
+        margin-top: $space-4;
+
+        span {
+            font-size: $font-size-2;
+            margin-left: $space-1;
+        }
+
+        select {
+            padding: $space-6 $space-3;
+            border: $border-1;
+            border-radius: $radius-2;
+        }
+    }
+
+    &-articles {
+        .article-card {
+            padding: $space-9;
+            border-bottom: $border-2;
+
+            .article-link {
+                &:hover {
+                    color: $color-2;
+
+                    h4 {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            h4 {
+                font-size: $font-size-4;
+            }
+
+            p {
+                font-size: $font-size-6;
+                margin-top: $space-1;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                line-clamp: 3;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+
+            time {
+                font-size: $font-size-6;
+                color: $color-1;
+            }
+        }
+    }
+}
+
+.more-results {
+    margin: $space-5;
+
+    .button {
+        @include button();
+        font-size: $font-size-4;
+    }
+}
+
+@media (max-width: 992px) {
+    .search {
+        &-form {
+            input {
+                width: 60%;
+            }
+        }
+
+        &-articles {
+            .article-card {
+                padding: $space-2;
+
+                h4 {
+                    font-size: $font-size-3;
+                }
+    
+                p {
+                    margin-top: 0;
+                    font-size: $font-size-8;
+                }
+    
+                time {
+                    font-size: $font-size-8;
+                }
+            }
+        }
+    }
+
+    .more-results {
+        .button {
+            font-size: $font-size-3;
+        }
+    }
+}

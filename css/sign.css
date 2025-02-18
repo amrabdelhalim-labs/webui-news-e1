@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Almarai";
+  src: url("../../fonts/almarai/Almarai-Light.ttf") format("ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Almarai";
+  src: url("../../fonts/almarai/Almarai-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Almarai";
+  src: url("../../fonts/almarai/Almarai-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Almarai";
+  src: url("../../fonts/almarai/Almarai-ExtraBold.ttf") format("ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+form .button {
+  background-color: #fff;
+  color: #B80000;
+  border: 1px solid #B80000;
+  padding: 2px 30px;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+  text-decoration: none;
+  font-size: 22px;
+}
+form .button:hover {
+  background-color: #B80000;
+  color: #fff;
+}
+
+a.custom {
+  color: #B80000;
+}
+
+.social-media-login .login-button {
+  color: #B80000;
+  margin-left: 20px;
+  margin-top: 10px;
+  font-size: 24px;
+  transition: all 0.5s ease;
+}
+.social-media-login .login-button:hover {
+  color: rgba(184, 0, 0, 0.5);
+}
+
+@media (max-width: 992px) {
+  body main .vh-100 {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=sign.css.map */

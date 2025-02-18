@@ -74,3 +74,14 @@
         }
     }
 }
+
+@mixin arrow($bg-color: $color-3, $border: $border-1, $transform: $transform-1) {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: $bg-color;
+    transform: $transform;
+    border-top: $border;
+    border-left: $border;
+}

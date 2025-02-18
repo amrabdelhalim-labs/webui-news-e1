@@ -18,6 +18,7 @@ $space-7: 30px;
 $space-8: 35px;
 $space-9: 25px;
 $space-10: 40px;
+$space-11: 100px;
 
 // Width & height spaces
 
@@ -27,6 +28,8 @@ $layout-3: 20px;
 $layout-4: 170px;
 $layout-5: 50px;
 $layout-6: 40px;
+$layout-7: 215px;
+$layout-8: 390px;
 
 // Font Sizes
 
@@ -38,15 +41,23 @@ $font-size-5: 14px;
 $font-size-6: 16px;
 $font-size-7: 60px;
 $font-size-8: 12px;
+$font-size-9: 24px;
 
 // Radiuses
 
 $radius-1: 10px;
+$radius-2: 5px;
 
 // Transitions
 
 $transition-1: all 0.5s ease;
 
+// transforms
+
+$transform-1: rotate(45deg) translateX(50%);
+$transform-2: rotate(45deg);
+
 // Borders
 
 $border-1: 1px solid $color-1;
+$border-2: 1px dotted $color-1;

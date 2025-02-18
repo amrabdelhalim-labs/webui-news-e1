@@ -17,6 +17,11 @@ img {
     @include card();
 }
 
+.navbar-small {
+    padding: 0 !important;
+    transition: $transition-1;
+}
+
 .swiper {
     width: 100%;
     height: 100%;
@@ -107,20 +112,14 @@ header {
                 visibility: hidden;
 
                 &::after {
-                    position: absolute;
-                    content: "";
-                    width: 20px;
-                    height: 20px;
-                    background-color: $color-3;
-                    transform: rotate(45deg) translateX(50%);
+                    @include arrow();
                     top: -18px;
                     right: 50%;
-                    border-top: $border-1;
-                    border-left: $border-1;
                 }
 
                 .button {
                     @include button($main-color, $color-3, $main-color);
+                    visibility: hidden;
                 }
             }
 
