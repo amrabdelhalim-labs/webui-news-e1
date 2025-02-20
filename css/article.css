@@ -185,6 +185,17 @@
     font-size: 12px;
   }
 }
+@media (max-width: 992px) {
+  .most-read-text h4.article-title {
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+}
 @media (max-width: 768px) {
   .article-header .header-category {
     font-size: 16px;

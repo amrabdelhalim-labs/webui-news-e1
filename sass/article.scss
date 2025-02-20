@@ -193,6 +193,22 @@
     }
 }
 
+@media (max-width: 992px) {
+    .most-read {
+        &-text {
+            h4.article-title {
+                font-size: $font-size-6;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                line-clamp: 2;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+            }
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .article {
         &-header {
